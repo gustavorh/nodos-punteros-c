@@ -5,7 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>	//Librería para el manejo de fecha y hora del sistema
+#include <time.h>	//LibrerÃ­a para el manejo de fecha y hora del sistema
 #include <string.h>
 
 typedef struct Registro {
@@ -37,7 +37,7 @@ typedef struct Registro {
 void main() {
 	//Variables para manejo de fecha y hora
 	time_t t;
-	struct tm tiempoLocal;	//struct tm es una estructura que maneja la librería time
+	struct tm tiempoLocal;	//struct tm es una estructura que maneja la librerÃ­a time
 	char fecha[20];
 	char hora[20];
 	char* formatoFecha;
@@ -45,7 +45,7 @@ void main() {
 	int bytes;
 	
 	//Variables del programa desarrollado
-	int opcion;		//Manejo de opciones del menú
+	int opcion;		//Manejo de opciones del menÃº
 	int contadorPacientes = 0;
 	char numeroClasif[2];
 	int indiceTriage;
@@ -66,19 +66,19 @@ void main() {
 	printf("\nURGENCIAS HOSPITAL DR. KHIEN TEKURA\n");
 	do {
 		printf("\n(1) Registrar ingreso");		//Equivale a crear un nodo con los datos de ingreso
-		printf("\n(2) Aplicar Triage");			//Clasificación del paciente según nivel de gravedad. Incluye derivación a box
-		printf("\n(3) Atender un paciente");	//Siempre se realiza por prioridad. Médico completa datos
-		printf("\n(4) Cerrar atencion");		//Finaliza atención del paciente
+		printf("\n(2) Aplicar Triage");			//ClasificaciÃ³n del paciente segÃºn nivel de gravedad. Incluye derivaciÃ³n a box
+		printf("\n(3) Atender un paciente");	//Siempre se realiza por prioridad. MÃ©dico completa datos
+		printf("\n(4) Cerrar atencion");		//Finaliza atenciÃ³n del paciente
 		printf("\n(5) Mostrar Triage");			//Muestra todas las atenciones que no han sido cerradas, por nivel de Triage
-		printf("\n(6) Finalizar turno");		//Indica término de ejecución del programa
-												//NO SE PUEDE FINALIZAR EL TURNO mientras queda algún paciente por atender
+		printf("\n(6) Finalizar turno");		//Indica tÃ©rmino de ejecuciÃ³n del programa
+												//NO SE PUEDE FINALIZAR EL TURNO mientras queda algÃºn paciente por atender
 		
 		do {
 			printf("\n    Ingrese una opcion: ");
 			scanf("%i",&opcion);			
 		}while(opcion < 1 || opcion > 6);
 		
-		//Manejo de fecha y hora. Se obtiene del sistema y queda disponible para la opción que lo requiera
+		//Manejo de fecha y hora. Se obtiene del sistema y queda disponible para la opciÃ³n que lo requiera
 		t=time(NULL);
 		tiempoLocal=*localtime(&t);
 		formatoFecha="%d-%m-%Y";
