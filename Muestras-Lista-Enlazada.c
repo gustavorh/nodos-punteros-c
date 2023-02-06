@@ -16,14 +16,14 @@ void main()
 	NodoMuestra* head=NULL;		//Puntero de inicio de lista
 	NodoMuestra* aux=NULL;		//Puntero auxiliar
 	NodoMuestra* aux2 = NULL;	// Puntero auxiliar.
-	int opcion;					//Manejo de opciones del menú
-	int posicion;				//Posición donde se desea insertar el nuevo nodo en la lista
+	int opcion;					//Manejo de opciones del menÃº
+	int posicion;				//PosiciÃ³n donde se desea insertar el nuevo nodo en la lista
 	int longitud;				//Longitud de la lista
 	int i;
 	int cantNodos;				// Cantidad de nodos de la lista a agregar.
 		
 		
-	printf("\nINSERCIONES EN UNA LISTA ENLAZADA SIMPLE (El codigo sera construido entre todos)\n");	//De acuerdo a este código, la lista nunca estará vacía
+	printf("\nINSERCIONES EN UNA LISTA ENLAZADA SIMPLE (El codigo sera construido entre todos)\n");	//De acuerdo a este cÃ³digo, la lista nunca estarÃ¡ vacÃ­a
 	do
 	{
 		printf("\n(1) Crear una lista enlazada simple");
@@ -60,7 +60,7 @@ void main()
 						nuevo->mg = i+4;
 						nuevo->sig = NULL;
 						
-						if (head == NULL) // Se pregunta si la lista está vacía
+						if (head == NULL) // Se pregunta si la lista estÃ¡ vacÃ­a
 							head = nuevo;
 						else // Caso contrario se debe enlazar la lista,
 							aux->sig = nuevo;
@@ -81,7 +81,7 @@ void main()
 					else {
 						/*
 							Se debe guardar la posicion de la lista para no perder su acceso de retorno.
-							La variable aux ayudará a guardar dicha lista y enviar head al siguiente nodo.
+							La variable aux ayudarÃ¡ a guardar dicha lista y enviar head al siguiente nodo.
 						*/
 						aux = head;
 						head = head->sig;
