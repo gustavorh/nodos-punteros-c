@@ -52,7 +52,7 @@ void main() {
 
         switch(opcion) {
             case 1: // Crear un nodo.
-				nuevo = (Nodo*)malloc(sizeof(Nodo)); // Ayuda a crear un nuevo nodo del tamaño de la estructura declarada, si nuestra estructura tiene nombre "Nodo" debemos usar este nombre.
+				nuevo = (Nodo*)malloc(sizeof(Nodo)); // Ayuda a crear un nuevo nodo del tamaÃ±o de la estructura declarada, si nuestra estructura tiene nombre "Nodo" debemos usar este nombre.
 				printf("\nIngresa un valor para el nuevo nodo: ");
 				scanf("%i", &nuevo->dato);
 										
@@ -65,7 +65,7 @@ void main() {
             case 2: // Insertar un nodo al principio de la lista.
 				if (nuevo == NULL) //Si no hay un nodo creado en nuevo, osea es NULL, retornar mensaje de ir a la opcion numero 1.
 					// No hay un nodo creado para insertar
-					printf("\nPara insertar un nodo, debe crear uno primero en la opción 1.");
+					printf("\nPara insertar un nodo, debe crear uno primero en la opciÃ³n 1.");
                 else { //Existe un nodo creado
                     if(inicio==NULL) {//Si hay una lista vacia entonces hacer que el inicio sea el nodo a ingresar, unico nodo en la lista.
                         inicio = nuevo;//El inicio de la lista es el valor del nodo nuevo
@@ -96,7 +96,7 @@ void main() {
 					scanf("%f", &borrar);
 					aux = inicio;	
 					
-					while(aux->dato != borrar && aux->sig != NULL) //Se verifica si el valor es distinto al ingresado, si es así avanza. Y si aux siguiente es distinto a NULL para que no caiga el programa.
+					while(aux->dato != borrar && aux->sig != NULL) //Se verifica si el valor es distinto al ingresado, si es asÃ­ avanza. Y si aux siguiente es distinto a NULL para que no caiga el programa.
 						aux=aux->sig;
 						
 					if(aux->dato != borrar)	//Verificar si el valor ingresado existe en la lista.
@@ -213,11 +213,11 @@ void main() {
 							i++;
 						}
 							
-						//Eliminación - Desconexión del nodo de la lista
+						//EliminaciÃ³n - DesconexiÃ³n del nodo de la lista
 						aux2->sig = aux->sig;
 						aux->sig = NULL;
 						
-						//Eliminación - Devolución de memoria del nodo
+						//EliminaciÃ³n - DevoluciÃ³n de memoria del nodo
 						free(aux);
 						aux = NULL;
 					} else
@@ -227,7 +227,7 @@ void main() {
             case 7: // Insertar un nodo al final de la lista.
 				if (nuevo == NULL)
 				    // No hay un nodo creado para insertar
-				printf("\nPara insertar un nodo, debe crear uno primero en la opción 1.");
+				printf("\nPara insertar un nodo, debe crear uno primero en la opciÃ³n 1.");
                 else {
                     if(inicio == NULL) { //No hay Lista
 					    inicio = nuevo; // Head apunta a nuestro nuevo nodo.
@@ -243,7 +243,7 @@ void main() {
 				break;
 			case 8: // Eliminar un nodo al final de la lista.
 				if(inicio == NULL)
-					printf("\nPara insertar un nodo, debe crear uno primero en la opción 1.");
+					printf("\nPara insertar un nodo, debe crear uno primero en la opciÃ³n 1.");
 				else {
                     if(inicio->sig == NULL) {
 						//printf("\nHay un solo nodo en la lista");
@@ -269,7 +269,7 @@ void main() {
 				else {
 					printf("NULL<--");
 					while(aux != NULL) {
-						printf("| %i |", aux->dato);		//Hay un detallito con la flechita en la impresiï¿½auxn
+						printf("| %i |", aux->dato);		//Hay un detallito con la flechita en la impresiÃ¯Â¿Â½auxn
 						if(aux->sig != NULL)
 							printf("<-->");
 						aux = aux->sig; // Avanzamos el puntero al siguiente nodo.
